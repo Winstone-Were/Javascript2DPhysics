@@ -150,7 +150,7 @@ Circle.prototype.draw = function (context) {
     context.arc(this.center.x, this.center.y,
         this.radius, 0, Math.PI * 2, true);
     //draw a line from start point toward center
-    context.moveTo(this.startpoint.x, this.startpoint.y);
+    context.moveTo(this.startPoint.x, this.startPoint.y);
     context.lineTo(this.center.x, this.center.y);
     context.closePath();
     context.stroke();
@@ -201,7 +201,7 @@ const userInput = (context, width, height) => {
         console.log(event.keyCode)
 
         if (event.keyCode >= 48 && event.keyCode <= 57) {
-            ObjectIndex = keyCode - 48;
+            ObjectIndex = event.keyCode - 48;
         }
         if (event.keyCode == 44) {
             if (ObjectIndex > 0) {
